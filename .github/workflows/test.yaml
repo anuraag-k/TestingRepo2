@@ -1,0 +1,19 @@
+name: HCL OneTest Server
+
+on: workflow_dispatch
+
+jobs:
+    OTS-Action:
+        runs-on: self-hosted
+        name: HCL OneTest Server
+        steps:
+         - name: Execute Test
+           uses: anuraag-k/ServerAction@main
+           with:
+            serverUrl: https://master-hcl.tp-k8s.nonprod.hclpnp.com/
+            offlineToken: eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTk1OTJhMy1hNmQwLTRiMzMtYmVlMi0yODJhOThlNWZhYjAifQ.eyJpYXQiOjE2NTkwNzcxNjMsImp0aSI6ImZhYjY4NWM1LTZlZjktNGY3Ny1hNzM4LTIzYThlZjk0MGJmOCIsImlzcyI6Imh0dHBzOi8vbWFzdGVyLWhjbC50cC1rOHMubm9ucHJvZC5oY2xwbnAuY29tL2F1dGgvcmVhbG1zL3Rlc3RzZXJ2ZXIiLCJhdWQiOiJodHRwczovL21hc3Rlci1oY2wudHAtazhzLm5vbnByb2QuaGNscG5wLmNvbS9hdXRoL3JlYWxtcy90ZXN0c2VydmVyIiwic3ViIjoiNGY0MGRlZmEtZTM0My00OWJiLWE0NjQtYTU0ZGI2NzQ2MjE1IiwidHlwIjoiT2ZmbGluZSIsImF6cCI6InRlc3RzZXJ2ZXIiLCJzZXNzaW9uX3N0YXRlIjoiNDcyNGIzY2YtYWVmMy00NjZjLThiMzMtNjEyNTMwYjBiZDgzIiwic2NvcGUiOiJ0ZXN0c2VydmVyIGVtYWlsIG9mZmxpbmVfYWNjZXNzIHByb2ZpbGUiLCJzaWQiOiI0NzI0YjNjZi1hZWYzLTQ2NmMtOGIzMy02MTI1MzBiMGJkODMifQ.D9WCLfwPA3Euo4ECAou6U2zL8QmXTisJNv4J7OqqFTs
+            teamspace: Initial Team Space
+            project: A_P2
+            branch: master
+            assetId: 8077ddd1-cc66-4a22-b7dd-d1cc664a22f9
+            environment: SecondEnv
